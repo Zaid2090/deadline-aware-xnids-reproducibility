@@ -1,0 +1,121 @@
+{
+  "schema_version": "1.0",
+  "stage": "validation_only_onnx_detector_runtime_optimization",
+  "evaluated_at_utc": "2026-08-31T11:14:21.741892+00:00",
+  "optimization_specification": {
+    "version": "1.0",
+    "scope": "validation_only_120",
+    "change": "Export frozen RandomForestClassifier trees to ONNX Runtime for single-event classification",
+    "source_model_sha256": "b0d0dd5ee8dafe1a0451958f1ac52247eb872217157e88631b83ae22fa59fe65",
+    "threshold": 0.5,
+    "feature_count": 60,
+    "onnx_runtime_threads": 1,
+    "probability_tolerance": 0.0001,
+    "shap_method": "TreeExplainer/tree_path_dependent/class_1/check_additivity_false",
+    "renderer": "grounded_fast_path_v2",
+    "validator": "strict_grounded_v2",
+    "detector_latency_target_ms": 10.0,
+    "pipeline_latency_target_ms": 50.0
+  },
+  "optimization_specification_sha256": "1380e0c7685cad18ecac9010c752ff9179785f9f6bcfcf903b0b53a00b77473a",
+  "source_model_file": "/content/drive/MyDrive/Zaid_Hybrid_IDS/models/random_forest_no_dst_port.joblib",
+  "source_model_sha256": "b0d0dd5ee8dafe1a0451958f1ac52247eb872217157e88631b83ae22fa59fe65",
+  "onnx_model_file": "/content/drive/MyDrive/Zaid_Hybrid_IDS/models/random_forest_no_dst_port_single_event_v1.onnx",
+  "onnx_model_sha256": "598088e639fed58b154bbb86cf8eabd5749ffd6253dd0981d791077edc832a83",
+  "validation_events": 120,
+  "detector_timing_rounds": 100,
+  "pipeline_timing_rounds": 10,
+  "max_sklearn_to_onnx_probability_delta": 7.836539375194462e-07,
+  "decision_agreement": true,
+  "quality": {
+    "strict_valid_rate": 1.0,
+    "fallback_rate": 0.0,
+    "decision_fidelity_rate": 1.0,
+    "confidence_fidelity_rate": 1.0,
+    "top2_feature_fidelity_rate": 1.0,
+    "max_expected_confidence_delta": 7.836539377414908e-07
+  },
+  "detector_only_latency": {
+    "calls": 12000,
+    "mean_ms": 0.09783910208333332,
+    "p50_ms": 0.036156999999999995,
+    "p95_ms": 0.08703489999999994,
+    "p99_ms": 2.195388020000002,
+    "max_ms": 9.252367
+  },
+  "pipeline_latency": {
+    "prepare_ms": {
+      "calls": 1200,
+      "mean_ms": 0.41338429416666667,
+      "p50_ms": 0.3143125,
+      "p95_ms": 0.47549474999999963,
+      "p99_ms": 4.097726969999996,
+      "max_ms": 8.512669
+    },
+    "detector_ms": {
+      "calls": 1200,
+      "mean_ms": 0.18363660333333334,
+      "p50_ms": 0.162404,
+      "p95_ms": 0.22806754999999998,
+      "p99_ms": 0.42695279999999997,
+      "max_ms": 6.107031
+    },
+    "shap_and_selection_ms": {
+      "calls": 1200,
+      "mean_ms": 5.743694156666666,
+      "p50_ms": 4.2599800000000005,
+      "p95_ms": 12.277909099999992,
+      "p99_ms": 28.03513859,
+      "max_ms": 41.001116
+    },
+    "renderer_ms": {
+      "calls": 1200,
+      "mean_ms": 0.024618801666666666,
+      "p50_ms": 0.018076000000000002,
+      "p95_ms": 0.026002349999999997,
+      "p99_ms": 0.03919749999999999,
+      "max_ms": 6.068468
+    },
+    "validator_ms": {
+      "calls": 1200,
+      "mean_ms": 0.13333570333333333,
+      "p50_ms": 0.0981665,
+      "p95_ms": 0.1617515,
+      "p99_ms": 0.20474900999999987,
+      "max_ms": 8.212711
+    },
+    "end_to_end_ms": {
+      "calls": 1200,
+      "mean_ms": 6.498669559166666,
+      "p50_ms": 4.854701,
+      "p95_ms": 13.342029349999992,
+      "p99_ms": 30.28949448,
+      "max_ms": 42.217352
+    }
+  },
+  "targets": {
+    "detector_single_event_p95_under_10ms": true,
+    "integrated_single_event_p95_under_50ms": true,
+    "zero_fallbacks": true,
+    "all_onnx_validation_targets_pass": true
+  },
+  "test_dataset_loaded": false,
+  "model_training_performed": false,
+  "threshold_tuning_performed": false,
+  "software": {
+    "python": "3.13.15 (main, Aug  6 2026, 11:06:23) [GCC 11.4.0]",
+    "platform": "Linux-6.6.122+-x86_64-with-glibc2.35",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "sklearn": "1.6.1",
+    "shap": "0.52.0",
+    "skl2onnx": "1.20.0",
+    "onnxruntime": "1.29.0"
+  },
+  "outputs": {
+    "detector_timing_calls": "/content/drive/MyDrive/Zaid_Hybrid_IDS/results/grounded_fast_path_onnx_runtime_optimization_v1/onnx_detector_validation_timing_calls.parquet",
+    "pipeline_timing_calls": "/content/drive/MyDrive/Zaid_Hybrid_IDS/results/grounded_fast_path_onnx_runtime_optimization_v1/onnx_pipeline_validation_timing_calls.parquet",
+    "pipeline_latency_summary": "/content/drive/MyDrive/Zaid_Hybrid_IDS/results/grounded_fast_path_onnx_runtime_optimization_v1/onnx_pipeline_validation_latency_summary.csv",
+    "event_results": "/content/drive/MyDrive/Zaid_Hybrid_IDS/results/grounded_fast_path_onnx_runtime_optimization_v1/onnx_validation_event_results.parquet"
+  }
+}

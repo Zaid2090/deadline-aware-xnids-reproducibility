@@ -1,0 +1,58 @@
+[
+  {
+    "decision": "Attack",
+    "first_direction": "supports_attack",
+    "second_direction": "supports_attack",
+    "valid": true,
+    "explanation": "Summary: Attack with 1.000 confidence\nEvidence: Fwd Seg Size Min and Init Fwd Win Byts provided the strongest local SHAP support for the detector decision.\nAction: Review network, authentication, and host logs, corroborate before containment."
+  },
+  {
+    "decision": "Attack",
+    "first_direction": "supports_attack",
+    "second_direction": "opposes_attack",
+    "valid": true,
+    "explanation": "Summary: Attack with 1.000 confidence\nEvidence: Fwd Seg Size Min supported the detector decision, while Init Fwd Win Byts opposed it according to local SHAP evidence.\nAction: Review network, authentication, and host logs, corroborate before containment."
+  },
+  {
+    "decision": "Attack",
+    "first_direction": "opposes_attack",
+    "second_direction": "supports_attack",
+    "valid": true,
+    "explanation": "Summary: Attack with 1.000 confidence\nEvidence: Init Fwd Win Byts supported the detector decision, while Fwd Seg Size Min opposed it according to local SHAP evidence.\nAction: Review network, authentication, and host logs, corroborate before containment."
+  },
+  {
+    "decision": "Attack",
+    "first_direction": "opposes_attack",
+    "second_direction": "opposes_attack",
+    "valid": true,
+    "explanation": "Summary: Attack with 1.000 confidence\nEvidence: Fwd Seg Size Min and Init Fwd Win Byts locally opposed the detector decision according to SHAP evidence.\nAction: Review network, authentication, and host logs, corroborate before containment."
+  },
+  {
+    "decision": "Benign",
+    "first_direction": "supports_attack",
+    "second_direction": "supports_attack",
+    "valid": true,
+    "explanation": "Summary: Benign with 1.000 confidence\nEvidence: Fwd Seg Size Min and Init Fwd Win Byts locally opposed the detector decision according to SHAP evidence.\nAction: Review network, authentication, and host logs, corroborate before containment."
+  },
+  {
+    "decision": "Benign",
+    "first_direction": "supports_attack",
+    "second_direction": "opposes_attack",
+    "valid": true,
+    "explanation": "Summary: Benign with 1.000 confidence\nEvidence: Init Fwd Win Byts supported the detector decision, while Fwd Seg Size Min opposed it according to local SHAP evidence.\nAction: Review network, authentication, and host logs, corroborate before containment."
+  },
+  {
+    "decision": "Benign",
+    "first_direction": "opposes_attack",
+    "second_direction": "supports_attack",
+    "valid": true,
+    "explanation": "Summary: Benign with 1.000 confidence\nEvidence: Fwd Seg Size Min supported the detector decision, while Init Fwd Win Byts opposed it according to local SHAP evidence.\nAction: Review network, authentication, and host logs, corroborate before containment."
+  },
+  {
+    "decision": "Benign",
+    "first_direction": "opposes_attack",
+    "second_direction": "opposes_attack",
+    "valid": true,
+    "explanation": "Summary: Benign with 1.000 confidence\nEvidence: Fwd Seg Size Min and Init Fwd Win Byts provided the strongest local SHAP support for the detector decision.\nAction: Review network, authentication, and host logs, corroborate before containment."
+  }
+]

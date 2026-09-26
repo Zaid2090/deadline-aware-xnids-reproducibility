@@ -1,0 +1,45 @@
+{
+  "stage": "leakage_safe_grouped_split",
+  "source_file": "02-14-2018_clean.csv.gz",
+  "source_clean_sha256": "8bd7eac5605916d9846c751338d51e34d1a4d77f4b9c44c2f99918d97596033f",
+  "seed": 20260829,
+  "split_ratios": {
+    "train": 0.7,
+    "validation": 0.15,
+    "test": 0.15
+  },
+  "group_definition": "All 79 original columns except Label; Timestamp included",
+  "group_identifier": "pandas.util.hash_pandas_object uint64",
+  "unique_flow_groups": 819121,
+  "exact_duplicate_rows_beyond_first": 225625,
+  "conflicting_label_groups": 0,
+  "overlap_groups_across_splits": 0,
+  "non_model_columns": [
+    "Timestamp",
+    "flow_group_id"
+  ],
+  "outputs": {
+    "train": {
+      "file": "train.parquet",
+      "rows": 731315,
+      "columns": 81,
+      "sha256": "224baa867af02563124dba05c5d251746e0f5b0e7ad63f2485c951a962b05473"
+    },
+    "validation": {
+      "file": "validation.parquet",
+      "rows": 156714,
+      "columns": 81,
+      "sha256": "dfc4e8a448526802a3f703b1963857240167cca28043307be8bbcb221b68b6c2"
+    },
+    "test": {
+      "file": "test.parquet",
+      "rows": 156717,
+      "columns": 81,
+      "sha256": "7f49e329e036578fcb60686b257b82b0bff67123efb622a2f86fe4dd9affc03d"
+    }
+  },
+  "pandas_version": "2.2.3",
+  "numpy_version": "2.1.3",
+  "python_version": "3.13.15 (main, Aug  6 2026, 11:06:23) [GCC 11.4.0]",
+  "platform": "Linux-6.6.122+-x86_64-with-glibc2.35"
+}

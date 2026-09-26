@@ -1,0 +1,142 @@
+{
+  "schema_version": "1.0",
+  "stage": "onnx_post_optimization_confirmatory_end_to_end_test",
+  "interpretation": "Confirmatory deployment benchmark after Validation-only ONNX selection in Step 11G; not a new blind Test.",
+  "onnx_validation_manifest": "/content/drive/MyDrive/Zaid_Hybrid_IDS/results/grounded_fast_path_onnx_runtime_optimization_v1/onnx_runtime_validation_manifest.json",
+  "original_test_manifest": "/content/drive/MyDrive/Zaid_Hybrid_IDS/results/grounded_fast_path_end_to_end_test_v1_1/end_to_end_test_manifest.json",
+  "step_11f_manifest": "/content/drive/MyDrive/Zaid_Hybrid_IDS/results/grounded_fast_path_end_to_end_optimized_test_v1/optimized_end_to_end_test_manifest.json",
+  "evaluated_at_utc": "2026-08-31T11:30:25.269373+00:00",
+  "pipeline_specification": {
+    "version": "onnx_post_optimization_v1",
+    "detector": "same_frozen_random_forest_trees_exported_to_onnx",
+    "source_detector_sha256": "b0d0dd5ee8dafe1a0451958f1ac52247eb872217157e88631b83ae22fa59fe65",
+    "onnx_model_sha256": "598088e639fed58b154bbb86cf8eabd5749ffd6253dd0981d791077edc832a83",
+    "feature_set": "no_dst_port_feature_set",
+    "feature_count": 60,
+    "threshold": 0.5,
+    "runtime_setting": "ONNX Runtime CPU, sequential, one intra-op and one inter-op thread",
+    "runtime_setting_selected_on": "validation_only_step_11G",
+    "probability_tolerance": 0.0001,
+    "shap_method": "TreeExplainer/tree_path_dependent/class_1/check_additivity_false",
+    "top_features": 2,
+    "renderer": "grounded_fast_path_v2",
+    "validator": "strict_grounded_v2",
+    "fallback": "nf4_bnb_only_if_strict_validation_fails",
+    "timing_rounds": 10,
+    "detector_latency_target_ms": 10.0,
+    "pipeline_latency_target_ms": 50.0
+  },
+  "pipeline_specification_sha256": "f6c053c0467255c1d97c568f56bf338984d6da4689ed2d514aab004d5bc76b53",
+  "scope": "held_out_explainer_test_122",
+  "test_target_file": "/content/drive/MyDrive/Zaid_Hybrid_IDS/data/explainer/qwen25_15b_strict_repair_v1/teacher_targets_test.jsonl",
+  "test_target_sha256": "be9c6eac39507465e350b75baafe7951a1ca5ec73c08fba328c1f25b18fd0e30",
+  "raw_detector_test_file": "/content/drive/MyDrive/Zaid_Hybrid_IDS/data/splits/test.parquet",
+  "raw_detector_test_sha256": "7f49e329e036578fcb60686b257b82b0bff67123efb622a2f86fe4dd9affc03d",
+  "source_model_file": "/content/drive/MyDrive/Zaid_Hybrid_IDS/models/random_forest_no_dst_port.joblib",
+  "source_model_sha256": "b0d0dd5ee8dafe1a0451958f1ac52247eb872217157e88631b83ae22fa59fe65",
+  "onnx_model_file": "/content/drive/MyDrive/Zaid_Hybrid_IDS/models/random_forest_no_dst_port_single_event_v1.onnx",
+  "onnx_model_sha256": "598088e639fed58b154bbb86cf8eabd5749ffd6253dd0981d791077edc832a83",
+  "threshold": 0.5,
+  "test_events": 122,
+  "timing_rounds": 10,
+  "timed_single_event_calls": 1220,
+  "offline_data_load_ms": 1885.783998,
+  "offline_model_explainer_and_onnx_initialization_ms": 124.096673,
+  "test_numerical_equivalence": {
+    "max_probability_delta": 7.943792975639852e-07,
+    "decision_agreement": true,
+    "tolerance": 0.0001
+  },
+  "quality": {
+    "strict_valid_rate": 1.0,
+    "fallback_rate": 0.0,
+    "decision_fidelity_rate": 1.0,
+    "confidence_fidelity_rate": 1.0,
+    "top2_feature_fidelity_rate": 1.0
+  },
+  "latency": {
+    "prepare_ms": {
+      "calls": 1220,
+      "mean_ms": 0.4636393336065574,
+      "p50_ms": 0.3809975,
+      "p95_ms": 0.7446801999999997,
+      "p99_ms": 3.263075419999991,
+      "max_ms": 6.400336
+    },
+    "detector_ms": {
+      "calls": 1220,
+      "mean_ms": 0.23486004344262293,
+      "p50_ms": 0.1841315,
+      "p95_ms": 0.26219899999999996,
+      "p99_ms": 2.25507173,
+      "max_ms": 6.238643
+    },
+    "shap_and_selection_ms": {
+      "calls": 1220,
+      "mean_ms": 6.98462602295082,
+      "p50_ms": 6.0272190000000005,
+      "p95_ms": 15.315440449999999,
+      "p99_ms": 22.81147584999995,
+      "max_ms": 37.791435
+    },
+    "renderer_ms": {
+      "calls": 1220,
+      "mean_ms": 0.03244350245901639,
+      "p50_ms": 0.019946,
+      "p95_ms": 0.024278849999999998,
+      "p99_ms": 0.042863459999999964,
+      "max_ms": 8.059682
+    },
+    "validator_ms": {
+      "calls": 1220,
+      "mean_ms": 0.17420943278688528,
+      "p50_ms": 0.1337065,
+      "p95_ms": 0.16639779999999998,
+      "p99_ms": 2.19651877,
+      "max_ms": 10.169103
+    },
+    "end_to_end_ms": {
+      "calls": 1220,
+      "mean_ms": 7.889778335245902,
+      "p50_ms": 6.7969585,
+      "p95_ms": 17.1226319,
+      "p99_ms": 25.48824101999992,
+      "max_ms": 46.791343
+    }
+  },
+  "targets": {
+    "frozen_detector_accuracy": 0.9999744762852786,
+    "detector_accuracy_at_least_0_95": true,
+    "explanation_valid_rate_at_least_0_95": true,
+    "detector_single_event_p95_under_10ms": true,
+    "integrated_single_event_p95_under_50ms": true,
+    "probability_and_decision_equivalence": true,
+    "zero_test_fallbacks": true,
+    "all_onnx_test_targets_pass": true
+  },
+  "nf4_fallback": {
+    "available": true,
+    "path": "/content/drive/MyDrive/Zaid_Hybrid_IDS/models/student_qwen25_05b_distilled_quantized_v1/nf4_bnb",
+    "invoked_on_test_events": 0,
+    "latency_not_hidden": true
+  },
+  "training_performed": false,
+  "threshold_or_hyperparameter_tuning_on_test": false,
+  "test_previously_accessed": true,
+  "post_test_policy": "Report beside Steps 11D and 11F as a post-optimization confirmatory benchmark.",
+  "software": {
+    "python": "3.13.15 (main, Aug  6 2026, 11:06:23) [GCC 11.4.0]",
+    "platform": "Linux-6.6.122+-x86_64-with-glibc2.35",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "sklearn": "1.6.1",
+    "shap": "0.52.0",
+    "onnxruntime": "1.29.0"
+  },
+  "outputs": {
+    "event_results": "/content/drive/MyDrive/Zaid_Hybrid_IDS/results/grounded_fast_path_end_to_end_onnx_test_v1/onnx_end_to_end_test_event_results.parquet",
+    "timing_calls": "/content/drive/MyDrive/Zaid_Hybrid_IDS/results/grounded_fast_path_end_to_end_onnx_test_v1/onnx_end_to_end_test_timing_calls.parquet",
+    "latency_summary": "/content/drive/MyDrive/Zaid_Hybrid_IDS/results/grounded_fast_path_end_to_end_onnx_test_v1/onnx_end_to_end_test_latency_summary.csv",
+    "explanations": "/content/drive/MyDrive/Zaid_Hybrid_IDS/results/grounded_fast_path_end_to_end_onnx_test_v1/onnx_end_to_end_test_outputs.jsonl"
+  }
+}

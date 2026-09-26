@@ -1,0 +1,5 @@
+test_row,flow_group_id,original_label,binary_label,attack_probability,prediction,correct,error_type,Timestamp,Dst Port,Protocol
+42475,9173233468228890341,SSH-Bruteforce,1,0.44274104,0,False,false_negative,2018-02-14 02:58:46,22,6
+46823,8589092392238586267,SSH-Bruteforce,1,0.47442305,0,False,false_negative,2018-02-14 02:59:00,22,6
+48102,5002964937917579477,Benign,0,0.6037537,1,False,false_positive,2018-02-14 03:16:32,57840,6
+54414,6252122180311970774,Benign,0,0.7804342,1,False,false_positive,2018-02-14 09:19:13,22,6

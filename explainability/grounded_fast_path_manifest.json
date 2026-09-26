@@ -1,0 +1,52 @@
+{
+  "schema_version": "2.0",
+  "experiment": "grounded_fast_path_validation",
+  "scope": "validation_only",
+  "test_records_accessed": 0,
+  "validation_events": 120,
+  "validation_sha256": "44ee031e1469ba6f86f2a5efb2545f5fd31839f3d830b942df098cacf2466cca",
+  "fast_path_valid_count": 120,
+  "fast_path_valid_rate": 1.0,
+  "fast_path_coverage": 1.0,
+  "nf4_fallback_count": 0,
+  "nf4_fallback_rate": 0.0,
+  "nf4_fallback_model_dir": "/content/drive/MyDrive/Zaid_Hybrid_IDS/models/student_qwen25_05b_distilled_quantized_v1/nf4_bnb",
+  "nf4_single_alert_p95_full_pipeline_ms": 4686.325932600136,
+  "benchmark": {
+    "scope": "validation_120_repeated_single_alert",
+    "validation_events": 120,
+    "measurement_rounds": 5000,
+    "measured_calls": 600000,
+    "fast_path_valid_rate": 1.0,
+    "fallback_rate": 0.0,
+    "renderer_mean_ms": 0.009989522366666668,
+    "renderer_p50_ms": 0.009022,
+    "renderer_p95_ms": 0.016738,
+    "renderer_p99_ms": 0.018254010000000008,
+    "renderer_max_ms": 14.557934,
+    "renderer_throughput_events_per_second": 100104.88622927853,
+    "detector_ms_per_flow": 0.156,
+    "shap_ms_per_alert": 1.7696,
+    "full_pipeline_mean_ms": 1.9355895223666666,
+    "full_pipeline_p50_ms": 1.934622,
+    "full_pipeline_p95_ms": 1.942338,
+    "full_pipeline_p99_ms": 1.94385401,
+    "speedup_vs_nf4_single_alert_p95": 2412.7242182360314,
+    "renderer_peak_python_memory_mb": 18.783869743347168,
+    "meets_detector_under_10ms": true,
+    "meets_full_pipeline_under_50ms": true
+  },
+  "directional_stress_pass": true,
+  "targets": {
+    "quality_valid_rate_at_least_0_95": true,
+    "detector_latency_under_10ms": true,
+    "online_validation_p95_under_50ms": true,
+    "all_online_validation_targets_pass": true,
+    "nf4_fallback_p95_under_50ms": false
+  },
+  "interpretation": {
+    "fast_path": "Synchronous grounded explanation for records passing strict validation.",
+    "fallback": "Validated NF4 student used only when fast-path validation fails.",
+    "limitation": "The NF4 fallback itself does not meet the 50 ms target on Tesla T4."
+  }
+}

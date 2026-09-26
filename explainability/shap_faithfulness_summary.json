@@ -1,0 +1,16 @@
+{
+  "true_positive_events": 800,
+  "top_k": 5,
+  "random_repeats": 5,
+  "replacement_baseline": "training benign median",
+  "mean_top5_probability_drop": 0.8137446266831581,
+  "median_top5_probability_drop": 0.8573803245737901,
+  "mean_random5_probability_drop": 0.08580901014130067,
+  "median_random5_probability_drop": 0.0834497793385765,
+  "mean_paired_drop_difference": 0.7279356165418573,
+  "top5_greater_than_random_fraction": 1.0,
+  "top5_decision_flip_rate": 1.0,
+  "random5_decision_flip_rate": 0.0,
+  "wilcoxon_statistic": 320400.0,
+  "wilcoxon_one_sided_p_value": 6.9383234500888145e-133
+}

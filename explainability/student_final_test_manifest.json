@@ -1,0 +1,40 @@
+{
+  "stage": "frozen_student_one_time_held_out_test",
+  "model_dir": "/content/drive/MyDrive/Zaid_Hybrid_IDS/models/student_qwen25_05b_distilled_v1_validated/best_model",
+  "test_path": "/content/drive/MyDrive/Zaid_Hybrid_IDS/data/explainer/qwen25_15b_strict_repair_v1/teacher_targets_test.jsonl",
+  "test_sha256": "be9c6eac39507465e350b75baafe7951a1ca5ec73c08fba328c1f25b18fd0e30",
+  "test_events": 122,
+  "test_label_counts_qa_only": {
+    "FTP-BruteForce": 60,
+    "SSH-Bruteforce": 60,
+    "Benign": 2
+  },
+  "train_event_id_overlap": 0,
+  "validation_event_id_overlap": 0,
+  "train_validation_flow_group_overlap": 0,
+  "trainable_updates": 0,
+  "generation_seconds": 90.0625470660002,
+  "mean_batched_ms_per_event": 738.217598901641,
+  "rates": {
+    "schema_compliant": 1.0,
+    "decision_aligned": 1.0,
+    "confidence_aligned": 1.0,
+    "required_features_present": 1.0,
+    "direction_aligned": 1.0,
+    "action_grounded": 1.0,
+    "student_valid": 1.0,
+    "fallback_rate": 0.0,
+    "unsupported_feature_event_rate": 0.0,
+    "prohibited_content_event_rate": 0.0
+  },
+  "similarity": {
+    "exact_match_rate": 0.7950819672131147,
+    "bleu": 0.9537775640031931,
+    "rouge_l_f1": 0.9817023409317984,
+    "bertscore_f1": 0.9922270178794861
+  },
+  "outputs": {
+    "qa_csv": "/content/drive/MyDrive/Zaid_Hybrid_IDS/models/student_qwen25_05b_distilled_v1_validated/final_test/student_final_test_qa.csv",
+    "predictions_jsonl": "/content/drive/MyDrive/Zaid_Hybrid_IDS/models/student_qwen25_05b_distilled_v1_validated/final_test/student_final_test_predictions.jsonl"
+  }
+}

@@ -1,0 +1,8 @@
+Verified key SHA-256 values against original manifests:
+train.parquet      224baa867af02563124dba05c5d251746e0f5b0e7ad63f2485c951a962b05473
+validation.parquet dfc4e8a448526802a3f703b1963857240167cca28043307be8bbcb221b68b6c2
+test.parquet       7f49e329e036578fcb60686b257b82b0bff67123efb622a2f86fe4dd9affc03d
+Random Forest      b0d0dd5ee8dafe1a0451958f1ac52247eb872217157e88631b83ae22fa59fe65
+ONNX model         598088e639fed58b154bbb86cf8eabd5749ffd6253dd0981d791077edc832a83
+
+All five downloaded files matched their recorded manifest hashes during packaging.

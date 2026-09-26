@@ -1,0 +1,12 @@
+joblib
+jupyter
+matplotlib
+numpy
+onnxruntime
+pandas
+pyarrow
+scikit-learn
+scipy
+shap
+torch
+transformers
