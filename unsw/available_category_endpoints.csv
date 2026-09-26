@@ -1,0 +1,3 @@
+category,measure,value_percent,note
+Normal,specificity,81.56,Equivalent to one minus the conservative false-positive rate before rounding
+Fuzzers,recall,73.08,Weakest attack-category recall preserved in the experiment record

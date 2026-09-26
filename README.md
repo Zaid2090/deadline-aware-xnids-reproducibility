@@ -13,6 +13,7 @@ The primary CSE-CIC-IDS2018 experiment is a binary benchmark limited to Benign, 
 - `detection/`: baseline, port-ablation, five-seed, and frozen-test notebooks and outputs.
 - `explainability/`: TreeSHAP faithfulness and constrained explanation notebooks and outputs.
 - `latency/`: ONNX detector and end-to-end latency notebooks and timing outputs.
+- `unsw/`: published UNSW-NB15 operating-point summaries and a script that independently recomputes the paired threshold trade-off from the reported discordant counts.
 
 ## Dataset
 
@@ -32,7 +33,8 @@ The notebooks preserve their recorded outputs to document the reported execution
 
 Hardware-dependent latency values should be remeasured on the target system. The manifests record the software/runtime settings available from the original runs; the original detector CPU model and RAM capacity were not captured and are therefore not inferred here.
 
+The UNSW-NB15 release is currently a summary-level verification package. It does not include row-level holdout predictions or the original benchmark rows. This boundary is stated in `unsw/README.md`.
+
 ## Citation
 
 Please cite the associated manuscript when using these artifacts. The final bibliographic citation will be added after publication.
-

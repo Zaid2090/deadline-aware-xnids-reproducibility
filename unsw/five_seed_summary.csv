@@ -1,0 +1,5 @@
+metric,mean_percent,sd_percentage_points,seeds
+false_positive_rate,19.30,0.56,20260922-20260926
+recall,96.30,0.21,20260922-20260926
+f1,90.83,0.10,20260922-20260926
+roc_auc,97.18,0.05,20260922-20260926

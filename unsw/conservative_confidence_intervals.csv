@@ -1,0 +1,6 @@
+metric,estimate_percent,ci_95_lower_percent,ci_95_upper_percent,method
+accuracy,89.53,89.31,89.73,Wilson
+precision,86.45,86.15,86.74,Wilson
+recall,96.03,95.85,96.21,Wilson
+f1,90.99,90.80,91.18,Stratified multinomial bootstrap 20000 replicates seed 20260926
+false_positive_rate,18.44,18.05,18.84,Wilson
